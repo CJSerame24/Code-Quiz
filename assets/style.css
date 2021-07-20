@@ -1,0 +1,48 @@
+body {
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(./background1.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgb(139, 138, 138);
+    box-shadow: 5px 5px 100px;
+    border: solid rgba(0, 0, 0, 0.548) 1px;
+    opacity: .98;
+    padding: 50px 50px;
+    position: fixed;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -4;
+}
+
+/* styles for score history button */
+#highScores {
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    text-shadow: black 3px 2px 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+
+#highScores:hover {
+    cursor: pointer;
+    border-radius: .5em;
+    color: red;
+}
+
+/* styles for the score history */
+.high_score_list
