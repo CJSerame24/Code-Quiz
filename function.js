@@ -70,3 +70,75 @@ var questions =
   answer: "btnOne"
   },
   {
+  question: "Inside which HTML element do we put the JavaScript?",
+  choices: ["<scripting>", "Hyper Text Markup Language", "Home Tool Markup Language", "Higher Text Maker Language"],
+  answer: "btnTwo"
+  },
+  {
+  question: 'Where is the correct place to insert a JavaScript?',
+  choices: ['<scripting>', '<Javascript>', '<script>', '<scr>'],
+  answer: "btnThree"
+  },
+  {
+  question: "Which of the following is an advantage of using frames in web pages?",
+  choices: ["Frames takes long to load, especially when they contain alot of pictures", "Frames adds to the creativity and aesthetic of a web site", "Not all web browsers supports frames", "Frames are used to display multiple web pages in one window"],
+  answer: "btnTwo"
+  },
+  {
+  question: "How can you make a bulleted list?",
+  choices: ["<nl>", "<ul>", "<ol>", "<list>"],
+  answer: "btnTwo"
+  },
+  {
+  question: 'What is the purpose of using div tags in HTML?',
+  choices: ["For creating different sections", "For adding headings", "For adding titles", "For creating Different styles"],
+  answer: "btnOne"
+  },
+  {
+  question : "end of qestions"
+  }
+];
+
+//creates elements for user score history overlay
+var highScoreListBox = document.createElement("div")
+    highScoreListBox.setAttribute("class", "high_score_list")
+var scoreTitle = document.createElement('h2')
+    scoreTitle.setAttribute('class', 'scoreTitle')
+    scoreTitle.textContent = "User Score History"
+var userScoreList = document.createElement("ul")
+    userScoreList.setAttribute('class', "userScoreList")
+var fadeout = document.createElement("div")
+    fadeout.setAttribute('Id', 'fadeOut')
+var viewHighScores = document.getElementById('highScores')
+var exitBtn = document.createElement('button')
+    exitBtn.setAttribute('class', 'exitBtn')
+    exitBtn.setAttribute('id', 'exitBtn')
+    exitBtn.textContent = "X"
+var clearScoreListBtn = document.createElement('button')
+    clearScoreListBtn.setAttribute('id', 'clearScoreBtn')
+    clearScoreListBtn.textContent = "clear scores"
+
+
+console.log(Date())
+
+//save data to local storage
+function storeUserAndScore() {
+    var str = JSON.stringify(userHighScores)
+    localStorage.setItem("userAndScore", str)
+}
+
+//get data from local storage
+function getHighScores() {
+    var str = localStorage.getItem("userAndScore")
+    userHighScores = JSON.parse(str)
+    if (!userHighScores) {
+        userHighScores = []
+    }
+}
+
+//get date and time
+var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
+var month = months[new Date().getMonth()]
+var day = new Date().getDate()
+var  year = new Date().getFullYear() 
+var theTime = new Date().getHours() + ":"  + new Date().getMinutes()
