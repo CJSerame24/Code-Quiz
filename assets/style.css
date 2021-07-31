@@ -4,13 +4,14 @@ body {
     background-image: url(./background1.jpeg);
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center;  
 }
 
-.container {
-    background-color: rgb(139, 138, 138);
-    box-shadow: 5px 5px 100px;
+.container { 
+    background-color: rgba(117, 117, 117, 0.973);
+    box-shadow: 5px 5px 50px;
     border: solid rgba(0, 0, 0, 0.548) 1px;
+    border-radius: .5em;
     opacity: .98;
     padding: 50px 50px;
     position: fixed;
@@ -19,10 +20,10 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: -4;
+    z-index: -4;    
 }
 
-/* styles for score history button */
+/*styles score history button*/
 #highScores {
     position: fixed;
     top: 1px;
@@ -37,9 +38,161 @@ body {
     color: white;
     font-weight: bold;
 }
-
 #highScores:hover {
     cursor: pointer;
     border-radius: .5em;
-    color: red;
+    color: gainsboro;
+}
+
+/*styles user score history overlay*/
+.high_score_list {
+    border-radius: .5em;
+    width: 50%;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: white;
+    z-index: 2;
+}
+.userScoreList {
+    width: 50%;
+    overflow: auto;
+    margin: auto;
+    color: white;
+    text-shadow: none;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+#fadeOut {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.scoreTitle {
+    text-align: center;
+}
+.exitBtn {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    font-size: 24px;
+    z-index: 2;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: none;
+}
+.exitBtn:hover {
+    transform: scale(1.1);
+}
+.exitBtn:active {
+    transform: scale(0.9);
+}
+
+/*Styles Timer*/
+.time {
+    background-color:black;
+    border: solid black 1px;
+    border-radius: .5em;
+    box-shadow: grey 5px 5px 7px;
+    color: whitesmoke;
+    display: none;
+    font-weight: bold; 
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    margin-top: 0px;
+    padding: 10px 10px;
+}
+
+/*styles quiz cards*/
+.title {
+    font-size: 40px;
+    text-shadow: grey 3px 3px 5px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    z-index: -4;
+}
+.contents {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    z-index: -4;
+}
+/*styles the answer buttons*/
+.answer {
+    background-image: url(./metal.jpeg);
+    height: 70px;
+    width: 250px;
+    padding: 10px, 10px;
+    margin-right: 10px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px black;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    border-radius: .5em;
+    z-index: -4;
+}
+
+/*general button styles*/
+.btn{
+    background-image: url(./metal.jpeg);
+    border-radius: .5em;
+    color: whitesmoke;
+    text-shadow: 3px 3px 4px black;
+    display: block;
+    font-weight: bold;
+    font-size: 28px;
+    outline: none;
+    margin: auto;
+    padding: 10px;
+    z-index: -4;
+}
+.btn:hover, .answer:hover {
+    cursor: pointer;
+    color: gainsboro;
+}
+.btn:active, .answer:active {
+    transform: scale(0.9);
+}
+
+
+/*user name input box*/
+#userIntinput {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent;
+    border: inset;
+    outline: none;
+    background-color: black;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 990px) {
+    .title {
+        font-size: 24px;
+    }
+    .contents {
+        font-size: 20px;
+    }
+   .container {
+       width: 90%;
+       padding: 10px 10px;
+   }
+   .userScoreList, .high_score_list {
+       width: 100%;
+   }
+   
 }
