@@ -1,4 +1,4 @@
-# Web Development Quix
+# Web Development Quiz
 
 
 ## Description
@@ -13,5 +13,7 @@ This is a multiple-choice quiz with a countdown timer. It gives the user directi
 - When score history is clicked a list of users and scores is displayed
 
 ---
+
+This is the [link](https://cjserame24.github.io/Code-Quiz/) to the web application.
 
 ![](assets/Document.gif)
